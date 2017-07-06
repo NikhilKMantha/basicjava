@@ -1,1 +1,29 @@
-here more
+
+First session notes
+
+- Computer= Hardware + Software 
+
+ Hardware:
+
+- Hardware is the stuff in the computer that you can touch or feel
+for example the mouse is hardware,the keyboard and screen are also
+hardware. But, the most important are the CPU, RAM, and hard disk.
+
+- CPU a.k.a Central Processing Unit is like the brain. If you search
+2+2 it will show 4 just like our brain.
+
+- RAM a.k.a Random Access Memory is like a scratch pad. It does big
+calculations like 1423*8465 then erases it from the computer
+
+- Hard disk is like a notepad. It stores stuff permanently.
+
+ Software:
+
+- Software is a program
+-A program is a series of steps/instructions
+-the operating system is a special software
+
+Decimal is Base 10
+
+Binary is Base 2
+
