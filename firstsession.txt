@@ -19,6 +19,7 @@ calculations like 1423*8465 then erases it from the computer
 
  Software:
 
+-Word, Adobe, Youtube.
 - Software is a program
 -A program is a series of steps/instructions
 -the operating system is a special software
