@@ -12,7 +12,7 @@ hardware. But, the most important are the CPU, RAM, and hard disk.
 - CPU a.k.a Central Processing Unit is like the brain. If you search
 2+2 it will show 4 just like our brain.
 
-- RAM a.k.a Random Access Memory is like a scratch pad. It does big
+- RAM a.k.a Random Access Memory is like a scratchpad. It does big
 calculations like 1423*8465 then erases it from the computer
 
 - Hard disk is like a notepad. It stores stuff permanently.
