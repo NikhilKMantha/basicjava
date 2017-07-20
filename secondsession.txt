@@ -17,6 +17,11 @@ Extensions
 - .txt, .rtf, .java, .jpg, .png, .html, .mp4;
 
 -Terminal
+-pwd=present work directory
+-cd= home folder
+-cd ..=go back one directory
+-cd /= go to root directory
+-mkdir=make directory 
 
 -Helloworld Java
 -System.out.println(“hi”);
