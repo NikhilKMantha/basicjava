@@ -8,9 +8,9 @@ public class Application {
 		String name = "Nikhil";
 		Double y = 2.5;
 		
-		System.out.println(x);
-		System.out.println(name);
-		System.out.println(y);
+		System.out.print(x + ",");
+		System.out.print(name + ",");
+		System.out.print(y);
 	}
 
 }
