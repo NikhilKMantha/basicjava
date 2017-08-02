@@ -234,4 +234,4 @@ One can put comments in the code . if you start the line with // and anything fo
     // This loop prints up to 100 numbers.
 Indentation
 
-While editing the program indentation (meaning putting spaces or tabs in section of the code) is important for readability and identifying any mistakes in the code (yes indentation helps readability and hence spotting any errors easily).
+While editing the program indentation (meaning putting spaces or tabs in section of the code) is important for readability.
