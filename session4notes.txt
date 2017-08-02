@@ -1,0 +1,237 @@
+
+Variables
+
+We are used to create variables in algebra like below
+
+x = 2
+Here x is called variable because we can change its value by assigning to another value like
+
+x=3
+
+and 2 , 3 are called constants because they never change ( 2 is 2 always)
+
+Data Types
+
+The concept of variable is same in Java programming too, where a variable can change at any time.
+
+Before discussing how we create variables in Java, lets discuss following data.
+
+     Q: What is your age?  
+     A: 10
+     Q: Which grade you are in? 
+     A: 5
+
+     Q: What is your name? 
+     A: Nikhil
+     Q: Which street you live in ? 
+     A: Redfox
+
+     Q: What is the price of a bag of potatoes?
+     A: 24.50
+     Q: What is 5/2?
+     A: 2.5
+
+     If you observe the data above you can group them in 3 different categories
+     (10,5)                   -> Numbers
+     
+     (“Nikhil” , “Redfox”)     -> Strings(series of alphabets)
+
+     (24.50, 2.5)              -> Numbers with decimals
+
+In Java programming the above sets are given specific name and thats what we call them data type. ( type of the data it represents)
+
+Int (10,5) -> Numbers without decimals
+
+String (“Nikhil” , “Redfox”)
+
+double (24.50, 2.5) -> Numbers with decimals.
+
+In algebra you don't specify type, but in Java programming you need to tell the program what kind of data you need.
+
+    int age = 10;
+    int grade = 5;
+
+    String name = “Nikhil”;
+    String street = “Redfox”;
+
+    double bagPrice = 24.50;
+    double result = 2.5;
+
+If you see above we specify in below format
+
+Datatype VariableName = value ;
+
+Strings are represented in double quotes(""). Note : Not variables(ex:name) but their values (ex:”Nikhil”)
+
+Syntax
+
+What is Syntax in Java programming?
+
+it is grammar to programming just like  grammar in English.
+
+Some of the examples for syntax is every statement in Java will end with a ';' (semicolon)
+
+Another example is declaring variables like above where we start with datatype followed by space then variable and then = followed by value and ends with ; (int age = 10;)
+
+If statement
+
+In real life you get different paths based on certain conditions. For example if you are more than 15 years old, then you can get driver permit. If the day is Sunday or Saturday you don't have to go to school. In Java programming also you can conditions and do things only that conditions match. This is represented by if , else if and else statements.
+
+    int age = 10;
+
+    if( age > 15){
+        System.out.println("you can get drivers permit");
+    }else if( age == 15){
+        System.out.println("Congratulations. today is the day where you can apply for permit.");
+    }else{
+        System.out.println("Sorry, please wait till you get 15");
+    }
+In above program the syntax is
+
+    if( anything that evaluates to true/false){
+
+    }else if(anything that evaluates to true/false){
+
+    }else{
+        // Anything does not match above.
+    }
+In Java programming certain operators make the statement either true/false (you can think of yes/no). for example in above age > 15 the symbol > is used to check for greater than . So you can read the if( age is greater than 15 ) and if this is true(yes) then the block (block starts with { and ends with } ) will be executed (means program follows the instructions)
+
+Next we have age == 15. Why == ( two equals)?.
+
+In Java programming when we use single = it is called assignment, that is int age = 15 means we are assigning (setting) value 15 to variable age . After this the value of variable age will be 15 and before that it will be 0 (in Java if you don't specify anything to numbers by default they will be zero).
+
+when we use double == it is called comparison, that is age == 15 means we asking is age equal to 15?. The answer can be either yes (true) or no(false).
+
+Both if() and else if() take anything that can become yes or no statements. In future we will see complex conditions but ultimately the entire stuff ( whatever goes in between () )should be answered to yes or no
+
+One can put multiple statements (instructions, remember we are telling to computer to do some stuff) between { and }
+
+for example:
+
+   int age = 10;
+
+   if( age > 15){
+       System.out.println("you can get drivers permit");
+       System.out.println("you can drive now with an adult next to you");
+       System.out.println("certain restrictions , apply");
+   }else if( age == 15){
+       System.out.println("Congratulations. today is the day where you can apply for permit.");
+   }else{
+       System.out.println("Sorry, please wait till you get 15");
+   }
+Looping(repetitions)
+
+Just like we have some repetitions in real life, we have some repetitions in programming too. There are different ways of doing repetitions in programming.
+
+For loop
+
+One such loop in Java programming is the for loop. Before knowing syntax of for loop, lets take some real life scenario involving looping.
+
+Lets say you are about to run in school playground tracks. You have been asked to run for 10 times on the track.
+
+One time
+
+Before starting the run and entering in to the track, you do some warm ups
+Eat banana for instant energy
+Put music and ear buds
+Start counting your mind (still not finished one round,so you say yourself as zero)
+Next
+
+Check whether 10 rounds are done (you had zero runs so far, so you need to run on track)
+Next
+
+Start Run on track
+After finishing one round
+
+You add 1 to your run count which is 0+1 = 1
+Then check whether you have finished 10 runs
+As you have not reached 10 you will start run on track again.
+You go for 2nd round
+
+You add 1 to your run count which is 1+1 = 2
+Then check whether you have finished 10 runs (only 2 runs )
+As you have not reached 10 you will start run on track again.
+You go for 3rd round .. so you repeat these ....
+
+Now you are on run 9
+
+You add 1 to your run count which is 9+1 = 10
+Then check whether you have finished 10 runs
+Yes you are done
+Stop running at this time.
+
+Lets see how we can do this in Java programming
+
+    int i;  // For counting in loops usually variable name 'i' is used 
+
+    for(i=0 ; i<10 ; i++){
+        System.out.println("running :" + (i+1));
+    }
+The above program will print running statement as 10 times.
+
+Lets the syntax of for loop
+
+    for( initialziation_onetime ; condition_which_should_return_true_or_false ; do_some_increment_which_runs_for_each_loop){
+        somestatements_which_will_execute_aslongas_theconditionis_true
+    }
+Lets see how computer runs the above for program
+
+Step-1 (only one time)
+
+i=0
+Step-2
+
+i < 10 ( is 0<10, yes true)
+Step-3
+
+System.out.println("running " + (i+1)) ( prints "running 1")
+Step-4
+
+i=i+1 ( i will become 1)
+Step-5
+
+i<10 ( is 1<10 , yes true)
+Step-6
+
+System.out.println("running " + (i+1)) (prints "running 2")
+...
+
+...
+
+...
+
+Finally when i becomes 10 and the condition 10<10 becomes false and thats where the loop stops.
+
+so if you observe the 3 parts in for loop are
+
+initialization -> one time
+
+condition_which_should_return_true_or_false -> each loop time
+
+do_some_increment_which_runs_for_each_loop -> each loop time.
+
+Some general Info regarding Java programming
+
+Naming of variables
+
+When naming variables in Java programming, it is best practice give proper good names for easy understanding and readability of the code.
+
+some bad examples
+
+    int x;
+    String y;
+    double z;
+some good examples
+
+    int age;
+    String name;
+    double price;
+Commenting
+
+One can put comments in the code . if you start the line with // and anything followed by is comment and good practice to put your notes in the code
+
+    // This loop prints up to 100 numbers.
+Indentation
+
+While editing the program indentation (meaning putting spaces or tabs in section of the code) is important for readability and identifying any mistakes in the code (yes indentation helps readability and hence spotting any errors easily).
