@@ -11,7 +11,7 @@ public class Application {
 		int time = scanner.nextInt();
 		String end = scanner.nextLine();
 		
-		System.out.print(laps*time + end);
+		System.out.print("Total time of laps:" + laps*time + end);
 	
 	}
 
