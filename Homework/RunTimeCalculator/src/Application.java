@@ -12,7 +12,7 @@ public class Application {
 		String end = scanner.nextLine();
 		
 		System.out.print(laps*time + end);
-		
+	
 	}
 
 }
