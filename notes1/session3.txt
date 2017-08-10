@@ -1,0 +1,19 @@
+
+Third Session Notes
+
+Git:
+-Git is version control system.
+-central place to add and view your individual notes and projects.
+-Even though git offers lot of features we may not use them all in this course. But doing with git will enable them to learn all these features in future.
+-git is being used by lot of companies for real and it will be useful for you to learn them now.
+-We use git for taking notes, exercises and any quizzes.
+-Imagine you have taken a break from learning java and resuming again but want to refresh, then you can go to your Github account and go through the notes, exercises and get up to speed quickly
+-Now-a-days companies look for your Github account during hiring process, to see what you have learned and done and your Github account can be added to your resume.
+
+check-in:
+command                    Description
+-git status                -shows the status of any additions/modifications/deletions  
+-git add *                 -adds the file to local repository
+-git commit -m "comment"   -commits to local repository 
+-git push origin master    - pushes to remote repository(Github) 
+
