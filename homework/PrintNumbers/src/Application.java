@@ -1,5 +1,5 @@
 
-public class homework4loop {
+public class Application {
 
 	public static void main(String[] args) {
 		
