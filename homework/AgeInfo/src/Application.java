@@ -1,9 +1,9 @@
 
-public class homework4 {
+public class Application {
 
 	public static void main(String[] args) {
 		
-		int age = 234;
+		int age = 12;
 		
 		if( age < 13) {
 			System.out.println("you are a kid");
