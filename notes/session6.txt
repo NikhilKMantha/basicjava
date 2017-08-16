@@ -1,0 +1,71 @@
+ int age = 10;
+    String name = “nikhil”;
+datatype varaiblename = valueofthevariable ;
+
+In above we have 2 variables. age which is of type int (remember int can take only numbers) and another one name which is of type String (takes characters). int , String are the data types provided by Java.
+
+Can you represent a person with a single variable using any one of the Java supplied data types (int, String, double)? No. When you want to represent a person usually you describe with a name, age, grade, height, weight. If you want to represent the person you should have 5 variables (for _name one variable, age another one etc.,). What we need is a single variable p to represent a person. This is where we will learn big concept in Java which is defining your own data types.
+
+Your own data types
+
+You can define your own data type using basic data types (int , String ). This is like building a shape using small lego blocks.
+
+    class Person{
+
+    }
+Here you have defined your own data type called Person. Above class is keyword and Person is the name you have given to your data type.
+
+The syntax is
+
+class yourdatatypename{
+
+}
+
+Then you can define what you want in this data type. Lets fill in with some data types (lego blocks)
+
+    class Person{
+        int age;
+        int name;
+        int grade;
+        int height;
+        int weight;
+    }
+Now the data type Person is complete.
+
+Using this your data type
+
+How can we use this data type in our program?. Remember again how you are used to declare a basic Java supplied variable, which is datatype followed by variable.(int age;) Here also same.
+
+Person person1;
+
+Here the data type is Person and variable is person1
+
+We have slight difference in assigning values to this variable. In regular data type like int you have used = 10 ( just used = and then value). But for the data types you have created
+
+Person person1 = new Person();
+
+= new datatype();
+
+new is the keyword and you are saying to Java that I want to create new value ( the technical term object which we will learn more about this in the next class) for this data type I have created. Once you have done this, then you can assign individual parts of Person (age,name,grade,height,weight) using . (dot) like below
+
+    Person person1 = new Person();
+    person1.age = 10;
+    person1.name = “nikhil”;
+    person1.grade = 5;
+    person1.height = 4;
+    person1.weight = 72;
+In order to assign age we use our variable person1 and then . (dot) and then one of the property you have defined in the class.
+
+In order to use the variable for printing you use the same way like below
+
+    System.out.println( person1.name + " age is:" + person1.age);
+
+Not every line ends with ';'
+
+When we started the programming we said every line ends with ';'. Yes and No. Now that we have know more about Java we rephrase this that every statement should end with ';'. What forms statement and what not?
+
+statement is roughly equivalent to sentences in natural english language. When you see if it does not end and hence we don't put ;
+
+    if( x > 0); {       // Wrong to put ';' as this not statement where sentence is not done.
+
+    }
