@@ -12,9 +12,7 @@ public class Application {
 		System.out.println(p1.name);
 		System.out.println(p1.age);
 		System.out.println(p1.petName);
-		System.out.println(p1.grade);
-		
-		System.out.println("");
+		System.out.println(p1.grade + "\n");
 		
 		Person p2 = new Person();
 		p2.age = 14;
