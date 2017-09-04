@@ -1,0 +1,201 @@
+Class
+
+class is the technical term for creating data type
+
+class ClasNameHere{
+
+}
+
+// example
+class Person{
+
+}
+Object
+
+object is the technical term creating variable
+
+    Person p1 = new Person();
+Fields
+
+What we are calling a class properties are called fields in Java terminology
+
+class Person{
+    String name;        // field name of type String
+    int age;            // field age of type int
+}
+
+// creating object and accessing fields
+Person p1 = new Person();
+p1.name = "sai";
+p1.age = 16;
+Methods
+
+What we have called Actions(which are verbs) are called Methods in Java terminology
+
+class Car{
+    void start(){
+        System.out.println("starting the car");
+    }
+
+    void stop(){
+        System.out.println("stopping the car");
+    }
+}
+
+// accessing methods
+Car c1 = new Car();
+c1.start();
+c1.stop();
+Fields and Methods
+
+Class will have both fields and methods
+
+    class Car{
+        String name;
+        int horsePower;
+
+        void start(){
+            System.out.println("starting");
+        }
+
+        void stop(){
+            System.out.println("stopping");
+        }
+    } 
+
+// Accessing both fields and methods
+Car c1 = new Car();
+c1.name = "bmw";
+c1.horsePower = 200;
+c1.start();
+c1.stop();
+Connecting class methods and class fields
+
+We have both fields ( like name, horsePower in Car ) and methods ( start and stop in Car). Lets see what is the connection between them.
+
+Lets write a below program
+
+Open Eclipse
+New Java Project and name it as CarFieldMethodConnectionSample
+Create Application (with public static void main checked)
+Create Car class
+Fill the Car class like below
+    class Car{
+        String name;
+        int horsePower;
+
+        void start(){
+            System.out.println("starting");
+        }
+
+        void stop(){
+            System.out.println("stopping");
+        }
+    } 
+Fill the Application class in main method like below
+    Car c1 = new Car();
+    c1.name = "bmw";
+    c1.horsePower = 200;
+    c1.start();
+    c1.stop();
+
+    Car c2 = new Car();
+    c2.name = "honda";
+    c2.horsePower = 50;
+    c2.start();
+    c2.stop();
+Run the program and you will see below
+output
+
+starting
+stopping
+starting
+stopping
+If you see above output you see "starting" and "stopping" with 2 times one for each car. But the problem in this is, we don't know which car started first and which car stopped first by looking at the output ( not looking at the program).
+
+We can enhance this program to output which car is starting and which car is stopping. This is where the fields in the class and methods in the class are connected. The methods in a class have access to the fields as they are defined together in the class. You can think of these as family, where family member things can be accessed(shared) by other members. Also when you create c1 object ( at this time you should know object is nothing but creating a variable for the class) , you can think of creating a following memory in RAM ( Remember, we have learned in previous classes where RAM is scratch pad where computer program uses to do its work here).
+
+carmemoryimage
+
+What is this mean we can use name variable in methods start and stop like below
+
+public class Car {
+	String name;
+	int horsePower;
+
+	void start() {
+		System.out.println("starting : " + name + " which has:" + horsePower + " horse power");
+	}
+
+	void stop() {
+		System.out.println("stopping: " + name);
+	}
+}
+and the output will be
+
+starting : bmw which has:200 horse power
+stopping: bmw
+starting : honda which has:50 horse power
+stopping: honda
+these fields are called object variables. Even though we have not defined name in the method start we were able to access it because it is part of the class.
+
+We still have one problem. Look the code below
+
+public class Application {
+
+	public static void main(String[] args) {
+		Car c1 = new Car();
+		c1.name = "bmw";
+		c1.horsePower = 200;
+		c1.start();
+		// Start one more time and see what happens
+		c1.start();
+		c1.stop();
+
+		Car c2 = new Car();
+		c2.name = "honda";
+		c2.horsePower = 50;
+		c2.start();
+		c2.stop();
+
+	}
+}
+and the output will be
+
+starting : bmw which has:200 horse power
+starting : bmw which has:200 horse power
+stopping: bmw
+starting : honda which has:50 horse power
+stopping: honda
+Oops, we were able to start the car twice without stopping. In real scenario we can only stop after starting the car. We should be able to fix this
+
+boolean
+
+We have learned Java given types int, String and double. Lets visit a new kind of data type which is given by Java called boolean. This data type is used when your data value can take only yes or no. Like did you go to school? you have either yes or no. Are you taking chemistry class this year? yes or no.
+
+We are going to use this data type here. I will be giving pseudo code here and you should be finish this as home work.
+
+Before giving pseudo code lets walk through non programming scenario. Imagine you are Car object and conversations are done like below
+
+Me:  Start the car
+You: Starting
+Me:  Start
+You: Sorry , you have started already. You need to stop before starting again.
+How did you say sorry when I asked you the second time?. It is because you have remembered that I already called start. When I asked you to start the second time, you have asked yourself " did he already call start" and you got the answer yes (by thinking in your brain) and hence you said sorry.
+
+If you have followed this conversation , see the remembered and yes and no in giving answer in start.
+
+start method
+    is started
+        "sorry you have started already. you need to stop before starting again
+    else
+        "start" 
+        started = true
+
+stop method
+    is started
+        "stopping"
+        started = false
+    else
+        "sorry,  you have not started yet. please start the car before stopping"
+If you remember is in real conversation will become if in programming world.
