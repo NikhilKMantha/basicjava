@@ -14,7 +14,7 @@ public class Application {
 		}
 
 		System.out.print("Total time of laps: " +  String.format("%.2f", time ));
-I
+
 		//time is in minutes
 		
 	}
