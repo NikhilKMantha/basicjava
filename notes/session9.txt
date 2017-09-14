@@ -1,0 +1,144 @@
+Encapsulation
+
+sObject Oriented Programming (OOPs in short). Java language is based on Object Oriented Programming where everything is object ( you know now what mean by object which is nothing but creating a variable with new keyword for given class.)
+
+If you observe all the classes we have defined so far have some patterns. We have fields and methods which are defined in classes are related. For example
+
+    class Person{
+        String name;
+        int age;
+
+        void readBook(Sring bookName){
+                System.out.println(name + " is reading book:" + bookName)
+        }
+    }
+
+    class Car{
+        String name;
+        int horsePower;
+
+        void start(){
+
+        }
+
+        void stop(){
+
+        }
+    }
+
+    class Animal{
+        String name;
+
+        boolean canFly(){
+
+        }
+    }
+We did not put readBooks in Animal and Car. At the same time we did not put start in Person or Animal. This is the one part of first principal which is called Encapsulation which says packaging (putting) related data (fields) and behavior(methods) together in class.
+
+2nd part of Encapsulation
+
+A real car when you start lot of things happens which moves the car just you by putting pressure on accelerator. Imagine you have car where you need to put some gas in chamber, light the gas and turn some handlers which ultimately moves the wheels just move for a feet. How that experience will be? tough right? But somebody has to do it which Car manufacturer did all those things for you.
+
+Lets write a Car class which exists where you need to do lot of things to move the car.
+
+public class Car {
+	String name;
+	int horsePower;
+	boolean isStarted = false;	// used to indicate whether is is started or not.
+
+	void putGasInChamber() {
+		System.out.println("putting gas in chamber");
+	}
+	
+	void igniteChamber() {
+		System.out.println("Igniting chamber");
+	}
+	
+	void moveWheels() {
+		System.out.println("moving wheels");
+	}
+}
+
+	public static void main(String[] args) {
+		Car c1 = new Car();
+		c1.name = "bmw";
+		c1.horsePower = 200;
+
+        // You need to do all these things just moving the car.
+		c1.putGasInChamber();
+		c1.igniteChamber();
+		c1.moveWheels();
+	}
+Did you see from Application class you are calling individual calls to Car class to move the wheels. But in reality you will do the following
+
+public class Car {
+	String name;
+	int horsePower;
+	boolean isStarted = false;	// used to indicate whether is is started or not.
+
+	void start() {
+		putGasInChamber();
+		igniteChamber();
+		moveWheels();
+		System.out.println("now car is moving");
+	}
+
+	void stop() {
+	}
+	
+	void putGasInChamber() {
+		System.out.println("putting gas in chamber");
+	}
+	
+	void igniteChamber() {
+		System.out.println("Igniting chamber");
+	}
+	
+	void moveWheels() {
+		System.out.println("moving wheels");
+	}
+}
+
+public static void main(String[] args) {
+    Car c1 = new Car();
+    c1.name = "bmw";
+    c1.horsePower = 200;
+    c1.start();
+}
+Where you simply call start and Car is moving now which is what exactly happens in real life. In real life you can't control the gas chamber any more. This is what should be done in programming also where one should not be able to call pumGasInChamber , igniteChamber and moveWheels. This can be done by using private key word.
+
+public class Car {
+	String name;
+	int horsePower;
+	boolean isStarted = false;	// used to indicate whether is is started or not.
+
+	void start() {
+		putGasInChamber();
+		igniteChamber();
+		moveWheels();
+		System.out.println("now car is moving");
+	}
+	
+	void stop() {
+	}
+	
+	// Nobody can call this method outside Car class
+	private void putGasInChamber() {
+		System.out.println("putting gas in chamber");
+	}
+	
+	// Nobody can call this method outside Car class
+	private void igniteChamber() {
+		System.out.println("Igniting chamber");
+	}
+	
+	// Nobody can call this method outside Car class
+	private void moveWheels() {
+		System.out.println("moving wheels");
+	}
+}
+You observe above private key word is used so that outside one cannot call c1.patGasInChamber();
+
+privatenotvisible
+
+If you see above when you are trying to call private method you get not visible error. This is what second part of Encapsulation principle which is saying hiding the details. In Car class we are hiding putGasInChamer, ignoreChamber and moveWheels with Java keyword private.
