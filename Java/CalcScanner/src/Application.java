@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class Application {
 
 	public int prompt() {
-		System.out.println("");
-		System.out.println("Type 1 to add numbers");
+		System.out.println(“/n Type 1 to add numbers");
 		System.out.println("Type 2 to subtract numbers");
 		System.out.println("Type 3 to multiply numbers");
 		System.out.println("Type 4 to divide numbers");
