@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Application {
 
-	public int prompt() {
-		System.out.println(“/n Type 1 to add numbers");
+	public int prompt(Scanner scanner) {
+		System.out.print("\n");
+		System.out.println("Type 1 to add numbers");
 		System.out.println("Type 2 to subtract numbers");
 		System.out.println("Type 3 to multiply numbers");
 		System.out.println("Type 4 to divide numbers");
 		System.out.println("Type 5 to exit");
-		Scanner scanner = new Scanner(System.in);
 		return scanner.nextInt();
 	}
 	
@@ -22,7 +22,7 @@ public class Application {
 				numadd = numadd + scanner.nextInt();
 			}
 			System.out.println("The Sum is: " + numadd);
-			num = prompt();
+			num = prompt(scanner);
 			process(num, scanner);
 
 		} else if (num == 2) {
@@ -34,7 +34,7 @@ public class Application {
 			int numsub = num1 - num2;
 
 			System.out.println("The Difference is: " + numsub);
-			num = prompt();
+			num = prompt(scanner);
 			process(num, scanner);
 
 		} else if (num == 3) {
@@ -48,7 +48,7 @@ public class Application {
 			}
 			System.out.println("The Product is: " + nummul);
 
-			num = prompt();
+			num = prompt(scanner);
 			process(num, scanner);
 
 		} else if (num == 4) {
@@ -59,15 +59,16 @@ public class Application {
 			double divisor = scanner.nextDouble();
 			double quotient = dividend / divisor;
 
-			System.out.println("The Quotient is: " + String.format("%.2f", quotient));
-			num = prompt();
+			System.out.println("The Quotient is: " + String.format("%.3f", quotient));
+			num = prompt(scanner);
 			process(num, scanner);
 
 		} else if (num == 5) {
+			scanner.close();
 			System.exit(0);
 		} else if (num > 5) {
 			System.out.println("Invalid option");
-			num = prompt();
+			num = prompt(scanner);
 			process(num, scanner);
 		}
 	}
@@ -76,7 +77,7 @@ public class Application {
 
 		Application calc = new Application();
 		Scanner scanner = new Scanner(System.in);
-		int num = calc.prompt();
+		int num = calc.prompt(scanner);
 
 		calc.process(num, scanner);
 
