@@ -1,7 +1,7 @@
 
 public class Player {
-	void play(int gameNum) {
-		System.out.println("Playing Game " + gameNum + "...");
+	void play() {
+		System.out.println("Playing Game...");
 	}
 
 	int getScore() {
@@ -9,7 +9,7 @@ public class Player {
 	}
 	
 	int getScore(int gameNumber) {
-		System.out.println("The score was: " + gameNumber);
+		System.out.println("The score for game " + gameNumber + " is: " + 100);
 		return gameNumber;
 	}
 }

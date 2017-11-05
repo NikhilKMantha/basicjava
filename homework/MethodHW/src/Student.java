@@ -14,8 +14,8 @@ public class Student {
 		System.out.println("Doing " + HWname + " homework");
 	}
 	
-	private int HWtime(int HWtime) {
-		System.out.println("Time of homework: " + HWtime);
-		return HWtime;
+	private int hWtime(int hWtime) {
+		System.out.println("Time of homework: " + hWtime);
+		return hWtime;
 	}
 }
