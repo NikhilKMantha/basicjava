@@ -1,0 +1,25 @@
+1. Define 
+	-RAM: Random Access Memory
+	-CPU: Central Processing Unit
+2. Byte
+3. American Standard Code for Information Interchange
+4. To program computers and get jobs.
+5. Grammar
+6. ; , ()
+7. Public, void
+8. The identification/classification of variable.
+9. String and Int.
+10. A blueprint or a custom data type.
+11. an instance of a class.
+12. public class Application {
+
+		public static void main(String[] args) {
+		
+		
+		}
+
+}
+13. A method is like an instruction.
+14. Shared.
+15. Inheritence is reuse and extends. Encapsulation 
+is packaging related stuff and public and private.
